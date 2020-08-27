@@ -4,7 +4,9 @@
  [1] Simulation-Guided Boolean Resubstitution. Siang-Yun Lee, Heinz Riener, Alan Mishchenko, Robert K. Brayton, Giovanni De Micheli. IWLS 2020. https://arxiv.org/abs/2007.02579
 
 ## benchmarks
-The original benchmarks are from [IWLS 2005](http://iwls.org/iwls2005/benchmarks.html) and pre-processed with [ABC](https://github.com/berkeley-abc/abc). The optimized benchmarks can be found here in `sim_resub_exp/benchmarks_ifraig/` (with ABC command `ifraig`) and in `sim_resub_exp/benchmarks_ifraig-s/` (with `ifraig -s`), both repeated until no more size reduction can be observed. A set of highly optimized benchmarks used for experiments on equivalence checking are in `sim_resub_exp/benchmarks_dc2syn2`, which are optimized first with `ifraig -s` until saturation and then three times of `&dc2; &syn2`.
+The original benchmarks are from [IWLS 2005](http://iwls.org/iwls2005/benchmarks.html) and pre-processed with [ABC](https://github.com/berkeley-abc/abc). The optimized benchmarks can be found here in `sim_resub_exp/benchmarks_ifraig/` (with ABC command `ifraig`) and in `sim_resub_exp/benchmarks_ifraig-s/` (with `ifraig -s`), both repeated until no more size reduction can be observed. 
+
+A set of highly optimized benchmarks used for experiments on equivalence checking are in `sim_resub_exp/benchmarks_dc2syn2`, which are optimized first with `ifraig -s` until saturation and then three times of `&dc2; &syn2`.
 
 ## pattern files
 A relatively expressive set of simulation patterns can be found in `sim_resub_exp/256sa1obs_bitpacked/`, which was generated with 256 random patterns + 1x stuck-at-check + observability awareness. Generated patterns (i.e., except the 256 random ones) are bitpacked. They were used as the initial pattern set in resubstitution and appended with counter-examples. The final (appended) pattern sets can be found in `sim_resub_exp/cex` and are used in the quality experiments in the paper.
