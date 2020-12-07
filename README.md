@@ -37,7 +37,7 @@ The simulation patterns in `256sa1obs_bitpacked` were obtained by running [`patt
 
 Note that the obtained patterns may still be different because of the different implementation of random generators on different machines.
 
-### simulation-guided resubstitution - baseline
+### simulation-guided resubstitution
 The resubstitution quality comparison results were obtained by running different configurations of [`sim_resubstitution`](https://github.com/lsils/mockturtle/blob/master/experiments/sim_resubstitution.cpp).
 
 The baseline resubstitution settings with N=1, K=10 or 100 (Table IV, middle columns) are configured as follows:
@@ -65,3 +65,7 @@ The best-achievable resubstitution settings with N=20, K=100 (Table IV, last col
 `ps.max_pis = 100;`  
 `ps.max_divisors = 2000;`  
 `ps.max_inserts = 20;` 
+
+### simulation-guided combinational equivalence checking
+The experiments of CEC were done in [ABC](https://github.com/berkeley-abc/abc) with the following commands:
+`&read benchmarks_ifraig-s/$benchmarkname.aig; &sim_read 256sa1obs_bitpacked/$benchmarkname.pat; &cec benchmarks_dc2syn2/$benchmarkname.aig`
