@@ -2,7 +2,8 @@
  Benchmarks and pattern files used in the simulation-guided Boolean resubstitution paper[1] and the simulation-guided LS&V paper[2].
  
  [1] Simulation-Guided Boolean Resubstitution. Siang-Yun Lee, Heinz Riener, Alan Mishchenko, Robert K. Brayton, Giovanni De Micheli. IWLS 2020. https://arxiv.org/abs/2007.02579
- [2] A Simulation-Guided Logic Synthesis And Verification Paradigm. (Under review)
+ 
+ [2] A Simulation-Guided Logic Synthesis and Verification Paradigm. (Under review)
 
 ## benchmarks
 The original benchmarks are from [IWLS 2005](http://iwls.org/iwls2005/benchmarks.html) and pre-processed with [ABC](https://github.com/berkeley-abc/abc). The optimized benchmarks can be found here in `benchmarks_ifraig-s/`, which are preprocessed with `abc> ifraig -s` repeated until no more size reduction can be observed. 
